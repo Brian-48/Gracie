@@ -1,0 +1,129 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "navbar navbar"
+    "sidebar main"
+    "sidebar footer";
+}
+
+nav{
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    background-color: aqua;
+    padding: 1em;
+}
+
+button{
+    display: none;
+}
+aside{
+    height: calc(100vh - 50.66px);
+    top: 50.66px;
+    position: sticky;
+    align-self: start;
+    grid-area: sidebar;
+    background-color: grey;
+}
+
+footer{
+    grid-area: footer;
+    background-color: aquamarine;
+    padding: 1em;
+}
+
+main{
+    grid-area: main;
+}
+
+@media(max-width: 800px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        width: 300px;
+        display: none; /*to close the side bar by default*/
+  /*  }
+    aside.show{
+        display: block;/* setting displlay none andd display block can show and hide the side bar*/
+  /*  }
+    button{
+        display: block;
+    }
+} */
+
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Each section box */
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+/* Box styling */
+.box {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 70px;
+}
+
+/* ==================== FLEXBOX ==================== */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-container .box {
+  flex: 1 1 120px; /* grow shrink basis */
+}
+
+/* ==================== GRID ==================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.box:hover {
+  transform: translateY(-10px); /* moves box 10px up */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
